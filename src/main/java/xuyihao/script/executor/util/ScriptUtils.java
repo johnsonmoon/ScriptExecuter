@@ -156,7 +156,7 @@ public class ScriptUtils {
 	 * @param scriptLang script language 
 	 * @param bindings variables for script program
 	 * @param reader script file
-	 * @param args 执行脚本方法传入的参数
+	 * @param args parameters for script invoking function
 	 * @param functionName function to invoke
 	 * @return
 	 * @throws ScriptException 
