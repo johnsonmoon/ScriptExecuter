@@ -49,3 +49,10 @@ then you will find the result like this:
 name is :Johnson
 JohnsonLeo
 ```
+
+## version changes information
+
+### 1.1.0
+NUM | DESCRIPTION | DATE
+--- | --- | ---
+1 | Add script running time out judgement, while script running time out, force stopping the script thread. | 2018-02-05 

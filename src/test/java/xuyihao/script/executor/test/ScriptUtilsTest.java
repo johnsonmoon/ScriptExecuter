@@ -8,13 +8,12 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import xuyihao.script.executor.util.ScriptUtils;
 
 public class ScriptUtilsTest {
-	@Ignore
+	@Test
 	public void testInvokeScriptFunctionStringStringStringMapOfStringObject() throws Exception {
 		Map<String, Object> bindings = new HashMap<>();
 		bindings.put("name", "Johnson");
@@ -25,7 +24,7 @@ public class ScriptUtilsTest {
 				bindings));
 	}
 
-	@Ignore
+	@Test
 	public void testInvokeScriptFunctionStringStringStringObjectArray() throws Exception {
 		System.out.println(ScriptUtils.invokeScriptFunction(
 				ScriptUtils.SCRIPT_GROOVY,
@@ -34,7 +33,7 @@ public class ScriptUtilsTest {
 				"Johnson", "Leo"));
 	}
 
-	@Ignore
+	@Test
 	public void testInvokeScriptFunctionStringMapOfStringObjectStringStringObjectArray() throws Exception {
 		Map<String, Object> bindings = new HashMap<>();
 		bindings.put("name", "Johnson");
@@ -46,7 +45,7 @@ public class ScriptUtilsTest {
 				"Leo"));
 	}
 
-	@Ignore
+	@Test
 	public void testInvokeFileScriptFunctionStringReaderStringMapOfStringObject() throws Exception {
 		Map<String, Object> bindings = new HashMap<>();
 		bindings.put("name", "Johnson");
@@ -58,7 +57,7 @@ public class ScriptUtilsTest {
 				bindings));
 	}
 
-	@Ignore
+	@Test
 	public void testInvokeFileScriptFunctionStringReaderStringObjectArray() throws Exception {
 		System.out.println(ScriptUtils.invokeFileScriptFunction(
 				ScriptUtils.SCRIPT_GROOVY,
@@ -68,7 +67,7 @@ public class ScriptUtilsTest {
 				"Johnson", "Leo"));
 	}
 
-	@Ignore
+	@Test
 	public void testInvokeFileScriptFunctionStringMapOfStringObjectReaderStringObjectArray() throws Exception {
 		Map<String, Object> bindings = new HashMap<>();
 		bindings.put("name", "Johnson");
@@ -90,9 +89,9 @@ public class ScriptUtilsTest {
 		String fileContent = readFileIntoString(file);
 		String script = scriptHead + fileContent + scriptTail;
 		System.out.println(ScriptUtils.invokeScriptFunction(
-				ScriptUtils.SCRIPT_GROOVY, 
-				script, 
-				"execute", 
+				ScriptUtils.SCRIPT_GROOVY,
+				script,
+				"execute",
 				"Johnson ", "Leo ", "Mack ", "Mike "));
 	}
 
